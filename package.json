@@ -1,0 +1,35 @@
+{
+  "name": "@bizclik/google-ad-manager-mcp",
+  "version": "0.1.0",
+  "description": "Read-only MCP server for Google Ad Manager",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bizclik-Media/google-ad-manager-mcp.git"
+  },
+  "type": "module",
+  "bin": {
+    "gam-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "auth": "node dist/index.js auth",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@google-ads/admanager": "^0.12.0",
+    "@modelcontextprotocol/sdk": "^1.21.0",
+    "google-auth-library": "^10.5.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
